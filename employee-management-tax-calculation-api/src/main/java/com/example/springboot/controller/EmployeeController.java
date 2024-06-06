@@ -3,7 +3,6 @@ package com.example.springboot.controller;
 import com.example.springboot.entity.Employee;
 import com.example.springboot.response.EmployeeTaxResponse;
 import com.example.springboot.service.EmployeeService;
-import com.example.springboot.service.EmployeeServiceImpl;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,7 +17,7 @@ import java.util.Map;
 public class EmployeeController {
 
     @Autowired
-    private EmployeeServiceImpl employeeService;
+    private EmployeeService employeeService;
 
     @PostMapping
     public ResponseEntity<Employee> saveEmployee(@RequestBody @Valid Employee employee) {
